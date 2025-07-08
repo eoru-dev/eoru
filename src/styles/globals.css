@@ -26,9 +26,3 @@ body {
   color: var(--foreground);
   font-family: var(--font-ibm-plex-mono), "Courier New", Courier, monospace;
 }
-
-@layer utilities {
-  .clip-slant-right {
-    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 100%, 0% 100%);
-  }
-}
