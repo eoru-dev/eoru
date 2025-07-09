@@ -17,6 +17,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "George Zhu - Software Engineer",
   description: "My portfolio site",
+  icons: [{ rel: "icon", url: "/icon.png" }],
 };
 
 export default function RootLayout({
