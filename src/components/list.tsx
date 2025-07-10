@@ -26,8 +26,8 @@ export default function List<T>({
   return (
     <ul className={cn("list-none space-y-1 p-1 pl-3", className)}>
       {items.map((item, idx) => (
-        <li key={idx} className="flex items-center gap-3">
-          <SparkleIcon className="fill-primary-50/80 size-4" />
+        <li key={idx} className="flex items-center gap-2">
+          <SparkleIcon className="fill-primary-50/80 size-3" />
           {renderItem ? renderItem(item) : (item as ReactNode)}
         </li>
       ))}

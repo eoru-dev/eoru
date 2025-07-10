@@ -26,3 +26,53 @@ body {
   color: var(--foreground);
   font-family: var(--font-ibm-plex-mono), "Courier New", Courier, monospace;
 }
+
+@utility text-scanlines {
+  @apply bg-scanlines animate-scanlines bg-[length:100%_8px] bg-clip-text text-transparent;
+}
+
+@theme {
+  --background-image-scanlines: linear-gradient(
+    to bottom,
+    var(--color-white) 50%,
+    var(--color-neutral-200) 51%
+  );
+
+  --animate-scanlines: scanlines 4s steps(60) infinite;
+  @keyframes scanlines {
+    0% {
+      background-position: 0 50%;
+    }
+  }
+
+  --light-max-opacity: 0.5;
+  --animate-light: light 12s linear infinite;
+  @keyframes light {
+    /* flicker */
+    0% {
+      opacity: calc(0.1 * var(--light-max-opacity));
+    }
+    0.5% {
+      opacity: calc(1 * var(--light-max-opacity));
+    }
+    1% {
+      opacity: calc(0.1 * var(--light-max-opacity));
+    }
+    2% {
+      opacity: calc(1 * var(--light-max-opacity));
+    }
+    /* pulse */
+    28% {
+      opacity: calc(0.5 * var(--light-max-opacity));
+    }
+    52% {
+      opacity: calc(1 * var(--light-max-opacity));
+    }
+    76% {
+      opacity: calc(0.5 * var(--light-max-opacity));
+    }
+    100% {
+      opacity: calc(1 * var(--light-max-opacity));
+    }
+  }
+}

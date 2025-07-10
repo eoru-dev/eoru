@@ -24,7 +24,7 @@ export default function Section({
           "shadow-[_inset_0_0_5px_5px_var(--color-primary-100),0_0_5px_2px_var(--color-primary-500)]",
         )}
       >
-        <SparkleIcon className="fill-primary-50/80 size-6" />
+        <SparkleIcon className="fill-primary-50/80 size-5" />
         <div className="font-pixel text-4xl">{title}</div>
       </div>
       {children}

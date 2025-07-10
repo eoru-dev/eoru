@@ -9,13 +9,14 @@ export default function Button({
   return (
     <button
       className={cn(
-        "cursor-pointer px-6 py-1",
-        "transition duration-100 ease-in-out",
+        "cursor-pointer",
+        "px-3 py-1 sm:px-6",
+        "transition duration-150 ease-in-out",
         // default - light
         "from-primary-100/80 to-primary-500/30 bg-gradient-to-t",
         "shadow-[_inset_0_0_5px_2px_var(--color-primary-100),0_0_5px_2px_var(--color-primary-500)]",
         // hover - lighter
-        "hover:from-primary-50/30 hover:to-primary-400/50",
+        "hover:from-primary-50/50 hover:to-primary-400/40",
         "hover:shadow-[_inset_0_0_5px_3px_var(--color-primary-100),0_0_5px_3px_var(--color-primary-500)]",
         // active - darker
         "active:from-primary-200/60 active:to-primary-500/30",
