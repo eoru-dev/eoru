@@ -58,7 +58,7 @@ export default function Wrapper({ children }: { children?: ReactNode }) {
             height,
             transition: { duration: 0.25, ease: "easeOut" },
           }}
-          className="mt-2 overflow-hidden"
+          className="overflow-y-scroll"
         >
           <div ref={containerRef}>{children}</div>
         </LayoutTransition>
