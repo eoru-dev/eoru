@@ -15,8 +15,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "George Zhu - Software Engineer",
-  description: "My portfolio site",
+  title: "George Zhu - Software Developer",
+  description:
+    "I'm a software developer focused on game programming and frontend development. I enjoy solving challenges and creating polished, enjoyable user experiences.",
   icons: [{ rel: "icon", url: "/icon.png" }],
 };
 

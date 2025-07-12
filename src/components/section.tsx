@@ -12,9 +12,10 @@ export default function Section({
   title: string;
 } & HTMLAttributes<HTMLDivElement>) {
   return (
-    <div
+    <section
       className={cn(
         "from-primary-500/65 via-primary-500/65 to-primary-500/40 bg-gradient-to-b via-30%",
+        "text-sm sm:text-base",
         className,
       )}
     >
@@ -25,9 +26,9 @@ export default function Section({
         )}
       >
         <SparkleIcon className="fill-primary-50/80 size-5" />
-        <div className="font-pixel text-4xl">{title}</div>
+        <div className="font-pixel text-3xl sm:text-4xl">{title}</div>
       </div>
       {children}
-    </div>
+    </section>
   );
 }

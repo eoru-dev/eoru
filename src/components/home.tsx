@@ -9,13 +9,9 @@ import Link from "./link";
 import NextLink from "next/link";
 import { FlickeringGrid } from "./flickering-grid";
 import { useState, useEffect } from "react";
-import Button from "./button";
 import List from "./list";
 import Section from "./section";
-import GraduationCapIcon from "./icons/graduation-cap-icon";
-import HammerAndWrenchIcon from "./icons/hammer-and-wrench-icon";
-import BriefcaseIcon from "./icons/briefcase-icon";
-import HomeIcon from "./icons/home";
+import Navigation from "./navigation";
 
 const about = [
   "Hey, I'm a software developer focused on game programming and frontend development.",
@@ -123,24 +119,7 @@ export default function Home() {
       </div>
       <hr className="bg-primary-50/50 shadow-primary-50/25 my-2 h-0.5 border-t-0 shadow-[0_0_2px_1px]" />
 
-      <div className="font-pixel flex w-full items-center justify-center gap-2 text-lg sm:gap-6 sm:text-2xl">
-        <Button>
-          <span className="hidden sm:inline">Home</span>
-          <HomeIcon className="fill-primary-50 block size-6 p-px sm:hidden" />
-        </Button>
-        <Button>
-          <span className="hidden sm:inline">Experience</span>
-          <BriefcaseIcon className="fill-primary-50 block size-6 sm:hidden" />
-        </Button>
-        <Button>
-          <span className="hidden sm:inline">Projects</span>
-          <HammerAndWrenchIcon className="fill-primary-50 block size-6 p-0.5 sm:hidden" />
-        </Button>
-        <Button>
-          <span className="hidden sm:inline">Education</span>
-          <GraduationCapIcon className="fill-primary-50 block size-6 sm:hidden" />
-        </Button>
-      </div>
+      <Navigation />
     </div>
   );
 }

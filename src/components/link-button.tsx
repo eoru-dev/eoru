@@ -1,13 +1,14 @@
 import { cn } from "@/lib/utils";
-import { ButtonHTMLAttributes } from "react";
+import Link, { LinkProps } from "next/link";
+import { AnchorHTMLAttributes } from "react";
 
-export default function Button({
+export default function LinkButton({
   className,
   children,
   ...props
-}: ButtonHTMLAttributes<HTMLButtonElement>) {
+}: Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps> & LinkProps) {
   return (
-    <button
+    <Link
       className={cn(
         "cursor-pointer",
         "px-3 py-1 sm:px-6",
@@ -26,6 +27,6 @@ export default function Button({
       {...props}
     >
       {children}
-    </button>
+    </Link>
   );
 }
