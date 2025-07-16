@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import clsx from "clsx";
-import LinkedinIcon from "./icons/linkedin-icon";
-import GithubIcon from "./icons/github-icon";
-import CVIcon from "./icons/cv-icon";
-import Link from "./link";
+import LinkedinIcon from "../icons/linkedin-icon";
+import GithubIcon from "../icons/github-icon";
+import CVIcon from "../icons/cv-icon";
+import Link from "../link";
 import NextLink from "next/link";
-import { FlickeringGrid } from "./flickering-grid";
-import { useState, useEffect } from "react";
-import List from "./list";
-import Section from "./section";
-import Navigation from "./navigation";
+import { FlickeringGrid } from "../flickering-grid";
+import { useState, useEffect, useRef } from "react";
+import List from "../list";
+import Section from "../section";
+import Navigation from "../navigation";
+import Title from "../title";
 
 const about = [
   "Hey, I'm a software developer focused on game programming and frontend development.",
@@ -22,7 +23,25 @@ const languages = ["C++", "C#", "TypeScript"];
 const tools = ["Next.js", "Unity", "Unreal Engine"];
 
 export default function Home() {
+  const [titleHeight, setTitleHeight] = useState<number | "auto">("auto");
   const [styles, setStyles] = useState<CSSStyleDeclaration | null>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (titleRef.current) {
+      const observer = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          setTitleHeight(entry.contentRect.height);
+        }
+      });
+
+      observer.observe(titleRef.current);
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, []);
 
   useEffect(() => {
     setStyles(getComputedStyle(document.documentElement));
@@ -32,13 +51,9 @@ export default function Home() {
     <div className="flex h-full flex-col gap-4 p-3 sm:p-6">
       <div className="relative flex gap-4">
         <div
-          className={clsx(
-            "bg-primary-500/40 absolute w-full",
-            "font-pixel pointer-events-none text-6xl text-transparent sm:text-7xl md:text-8xl",
-          )}
-        >
-          George Zhu
-        </div>
+          className="bg-primary-500/40 absolute w-full"
+          style={{ height: titleHeight }}
+        />
 
         <Image
           src="/cat.gif"
@@ -56,17 +71,7 @@ export default function Home() {
         />
 
         <div className="z-1 flex w-full flex-col gap-2 overflow-x-hidden px-2">
-          <div
-            className={clsx(
-              "font-pixel relative",
-              "text-6xl sm:text-7xl md:text-8xl",
-            )}
-          >
-            <div className="text-scanlines">George Zhu</div>
-            <div className="text-primary-100 pointer-events-none absolute -bottom-1 -z-1">
-              George Zhu
-            </div>
-          </div>
+          <Title ref={titleRef}>George Zhu</Title>
           <div
             className={clsx(
               "text-primary-50 font-semibold",

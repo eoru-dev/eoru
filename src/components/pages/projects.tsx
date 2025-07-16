@@ -1,9 +1,9 @@
 "use client";
 
 import clsx from "clsx";
-import { FlickeringGrid } from "./flickering-grid";
+import { FlickeringGrid } from "../flickering-grid";
 import { useState, useEffect } from "react";
-import Navigation from "./navigation";
+import Navigation from "../navigation";
 
 export default function Projects() {
   const [styles, setStyles] = useState<CSSStyleDeclaration | null>(null);

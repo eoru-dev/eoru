@@ -1,6 +1,6 @@
-import React, { type SVGProps } from "react";
+import React, { ComponentProps } from "react";
 
-export default function GraduationCapIcon({ ...props }: SVGProps<SVGSVGElement>) {
+export default function GraduationCapIcon({ ...props }: ComponentProps<"svg">) {
   return (
     <svg
       width="800px"

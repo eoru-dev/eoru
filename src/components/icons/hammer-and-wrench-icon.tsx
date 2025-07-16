@@ -1,8 +1,8 @@
-import React, { type SVGProps } from "react";
+import React, { ComponentProps } from "react";
 
 export default function HammerAndWrenchIcon({
   ...props
-}: SVGProps<SVGSVGElement>) {
+}: ComponentProps<"svg">) {
   return (
     <svg
       width="800px"

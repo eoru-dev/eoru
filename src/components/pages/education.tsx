@@ -1,11 +1,11 @@
 "use client";
 
 import clsx from "clsx";
-import { FlickeringGrid } from "./flickering-grid";
+import { FlickeringGrid } from "../flickering-grid";
 import { useState, useEffect } from "react";
-import Navigation from "./navigation";
+import Navigation from "../navigation";
 
-export default function Experience() {
+export default function Education() {
   const [styles, setStyles] = useState<CSSStyleDeclaration | null>(null);
 
   useEffect(() => {
@@ -22,9 +22,9 @@ export default function Experience() {
               "text-6xl sm:text-7xl md:text-8xl",
             )}
           >
-            <div className="text-scanlines">Experience</div>
+            <div className="text-scanlines">Education</div>
             <div className="text-primary-100 pointer-events-none absolute -bottom-1 -z-1">
-              Experience
+              Education
             </div>
           </div>
           <div className="relative min-h-8 flex-1">

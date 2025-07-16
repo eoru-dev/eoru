@@ -1,6 +1,6 @@
-import React, { type SVGProps } from "react";
+import React, { ComponentProps } from "react";
 
-export default function HomeIcon({ ...props }: SVGProps<SVGSVGElement>) {
+export default function HomeIcon({ ...props }: ComponentProps<"svg">) {
   return (
     <svg
       height="800px"

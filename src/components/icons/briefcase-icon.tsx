@@ -1,6 +1,6 @@
-import React, { type SVGProps } from "react";
+import React, { ComponentProps } from "react";
 
-export default function BriefcaseIcon({ ...props }: SVGProps<SVGSVGElement>) {
+export default function BriefcaseIcon({ ...props }: ComponentProps<"svg">) {
   return (
     <svg
       fill="#000000"

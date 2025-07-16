@@ -1,6 +1,6 @@
-import React, { type SVGProps } from "react";
+import React, { ComponentProps } from "react";
 
-export default function LinkedinIcon({ ...props }: SVGProps<SVGSVGElement>) {
+export default function LinkedinIcon({ ...props }: ComponentProps<"svg">) {
   return (
     <svg
       width="534"

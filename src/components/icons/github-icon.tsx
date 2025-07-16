@@ -1,6 +1,6 @@
-import React, { type SVGProps } from "react";
+import React, { ComponentProps } from "react";
 
-export default function GithubIcon({ ...props }: SVGProps<SVGSVGElement>) {
+export default function GithubIcon({ ...props }: ComponentProps<"svg">) {
   return (
     <svg
       width="668"
