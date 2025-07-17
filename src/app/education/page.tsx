@@ -25,8 +25,9 @@ export default function Page() {
         Bachelor of Advanced Computer Science (Honours), Minor in Mathematics at
         University of New South Wales.
         <div>
-          Achieved 86.6 WAM, consecutive Dean&apos;s List and University Medal for
-          highest marks in honours cohort.
+          Achieved 86.6 WAM, consecutive Dean&apos;s List, graduated with First
+          Class Honours and University Medal for highest marks in honours
+          cohort.
         </div>
       </Showcase>
     </ShowcaseLayout>
