@@ -4,6 +4,8 @@ import Tag from "./tag";
 
 export default function Showcase({
   title,
+  subtitle = "",
+  year = "",
   tags = [],
   icon,
   buttons = [],
@@ -12,6 +14,8 @@ export default function Showcase({
   ...props
 }: {
   title: string;
+  subtitle?: string;
+  year?: string;
   tags?: string[];
   icon: ReactNode;
   buttons?: ReactNode[];
@@ -38,13 +42,21 @@ export default function Showcase({
       <div className="flex w-full flex-col overflow-auto">
         <div
           className={cn(
-            "flex items-center gap-1 px-1.5 py-0.5",
+            "flex items-center justify-between gap-1 px-1.5 py-0.5",
             "from-primary-100/60 via-primary-100/60 to-primary-100/80 bg-gradient-to-r via-70% shadow-[_inset_0_0_5px_5px_var(--color-primary-100),0_0_4px_1px_var(--color-primary-500)]",
             "font-pixel text-xl sm:text-2xl",
           )}
         >
-          <div className="flex sm:hidden">{icon}</div>
-          {title}
+          <div className="flex items-center gap-2">
+            <div className="flex sm:hidden">{icon}</div>
+            <div>{title}</div>
+            <div className="text-primary-50 mt-1 ml-1 hidden tracking-tight sm:inline sm:text-base">
+              {subtitle}
+            </div>
+          </div>
+          <div className="text-primary-50 mt-1 ml-1 hidden text-base tracking-tight sm:inline">
+            {year}
+          </div>
         </div>
 
         <div

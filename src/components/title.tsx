@@ -15,10 +15,10 @@ export default function Title({
       )}
       {...props}
     >
-      <div className="text-scanlines">{children}</div>
-      <div className="text-primary-100 pointer-events-none absolute -bottom-1 -z-1">
+      <div className="text-primary-100 pointer-events-none absolute -bottom-1">
         {children}
       </div>
+      <div className="text-scanlines relative">{children}</div>
     </div>
   );
 }

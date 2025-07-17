@@ -200,3 +200,21 @@ export const FlickeringGrid = ({
     </div>
   );
 };
+
+export const PrimaryFlickeringGrid = () => {
+  const [styles, setStyles] = useState<CSSStyleDeclaration | null>(null);
+
+  useEffect(() => {
+    setStyles(getComputedStyle(document.documentElement));
+  }, []);
+
+  return (
+    <FlickeringGrid
+      flickerChance={0.2}
+      maxOpacity={0.5}
+      gridGap={4}
+      squareSize={8}
+      color={styles?.getPropertyValue("--color-primary-50")}
+    />
+  );
+};
