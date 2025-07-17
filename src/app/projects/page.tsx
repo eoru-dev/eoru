@@ -39,7 +39,7 @@ export default function Page() {
           <GithubButton key="github" href="https://github.com/eoru-dev/eoru" />,
         ]}
       >
-        Portfolio website showcasing my work experience, personal projects and
+        Portfolio site showcasing my work experience, personal projects and
         education.
       </Showcase>
 
